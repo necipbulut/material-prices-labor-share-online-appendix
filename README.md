@@ -17,6 +17,8 @@ The full text of the Online Appendix follows, with all its tables, equations, fi
 - [OA.6 Local projections](#oa6-local-projections)
   - [Table OA5. Local projections of the labor share](#table-oa5)
 - [OA.7 Contributions to the labor share](#oa7-contributions-to-the-labor-share)
+- [OA.8 The elasticity of substitution](#oa8-the-elasticity-of-substitution)
+  - [Table OA6. The elasticity of substitution between materials and primary inputs](#table-oa6)
 - [References](#references)
 
 ---
@@ -168,6 +170,27 @@ Notes: Column (1): eq. (19) on the observations of columns (2)–(5). Columns (2
 Sector contributions from eq. (28) are converted into pp with the previous-year labor share, weighted by previous-year value added and summed over the years of a period. For the national accounts labor share, they are averaged within sections with previous-year personnel costs as weights and converted with section value added and labor shares; they are zero for sections A, D, P, Q and R.
 
 In 2018–2022 the labor share of the 53 sectors of Table 7 fell from 41.96% to 30.54%, mostly within sectors, and the year effects of eq. (19), which the contributions leave out, fell by 0.123 log points. The 95% interval of the two-channel total is [−2.18, −1.07] pp. Split by the shocks themselves, in the reduced form with $m_{j}Z_{jt}^{f}$ in place of the dollar price term, higher world prices lowered the labor share by 1.73 pp and the real exchange rate by 0.29 pp. The real exchange rate ended 2022 close to its 2018 level, so its part reflects only the timing of its rise in 2019–2020 and its fall in 2021–2022 (Section 4.5). This split need not add up to the two-channel total, since the dollar price of materials also moves with domestic shocks.
+
+## OA.8 The elasticity of substitution
+
+Table OA6 gives estimates of eq. (27) beyond Table 6. The estimate is below one in levels and in one- to five-year differences, but it is imprecise. Most of the information comes from 2021–2022: without these years, or without the energy products in the instrument, the estimate stays below one but no longer differs significantly from one.
+
+<a name="table-oa6"></a>**Table OA6. The elasticity of substitution between materials and primary inputs**
+
+|                                       | $\hat{\sigma}$ | SE    | 95% interval  | $p$, $\sigma=1$ | $F$ | Obs. |
+|:--------------------------------------|-----------------:|------:|:-------------:|--------------------:|------:|-----:|
+| Levels (Table 6, Panel C)             | 0.139            | 0.297 | [−0.44, 0.72] | 0.007               | 53    | 585  |
+| One-year differences                  | 0.025            | 0.255 | [−0.48, 0.53] | 0.004               | 86    | 480  |
+| Two-year differences                  | −0.027           | 0.222 | [−0.46, 0.41] | 0.000               | 87    | 423  |
+| Three-year differences                | −0.033           | 0.228 | [−0.48, 0.41] | 0.001               | 54    | 377  |
+| Four-year differences                 | 0.120            | 0.306 | [−0.48, 0.72] | 0.009               | 23    | 330  |
+| Five-year differences                 | 0.136            | 0.341 | [−0.53, 0.80] | 0.006               | 37    | 287  |
+| Long difference, 2018–2022            | 0.002            | 0.163 | [−0.32, 0.32] | 0.000               | 61    | 43   |
+| Materials as intermediate consumption | 0.232            | 0.322 | [−0.40, 0.86] | 0.023               | 32    | 706  |
+| Instrument without energy products    | −0.171           | 0.646 | [−1.44, 1.09] | 0.057               | 11    | 585  |
+| Without 2021–2022                     | 0.327            | 0.476 | [−0.61, 1.26] | 0.144               | 16    | 488  |
+
+Notes: Eq. (27) by 2SLS with the unscaled instrument $Z_{jt}^{f}$ of eq. (23) and sector and year effects; $\hat{\sigma}$ is one minus the coefficient of $\ln(P_{m,jt}/w_{jt})$. Differences: overlapping changes over one to five years, with year effects and the change of $Z_{jt}^{f}$ over the same years as the instrument; the long difference has one observation per sector and a constant. Intermediate consumption: materials adjusted for the change in stocks, the measure of materials in $m_{j}$. Energy products: coal, crude petroleum, natural gas, refined petroleum, and electricity and gas (Table OA1). Standard errors clustered by sector, and the 95% interval from them; $p$: wild cluster bootstrap test of $\sigma=1$, as in Table 6. $F$: cluster-robust first-stage $F$. Obs.: sector-years (sectors for the long difference).
 
 ## References
 
