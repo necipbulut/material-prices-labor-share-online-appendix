@@ -33,7 +33,7 @@ A confidential cell is recovered from its section total when it is the only one 
 
 The instrument of eq. (23) prices the 27 goods of Table OA1. The mining product of the 2012 input–output table is split into coal, crude petroleum, natural gas, metal ores and other mining, with a RAS procedure that keeps structural zeros. Six-digit HS codes are assigned to products through the official correspondences from HS to CPC 2.1 and from CPC 2.1 to CPA 2.1. The world price of a good chains the annual log change of its unit values, the mean over its codes weighted by 2013 imports, after changes more than $\ln2$ from the weighted median are dropped; gold is left out of basic metals. Goods without a world price, such as services, get no weight, so the weights of a sector sum to 0.389 on average.
 
-The identification comes from several groups of goods, not from energy alone. The effective number of products is 15 (Borusyak et al., 2022). The Rotemberg weights (Goldsmith-Pinkham et al., 2020) put 43% on waste and scrap and basic metals and 37% on the energy products, and almost all of the weight falls on products whose own estimate is negative. Dropping any one product, all energy products or the two largest leaves the estimate between −0.171 and −0.151 (Table OA1).
+Two groups of goods carry most of the identification. The Rotemberg weights (Goldsmith-Pinkham et al., 2020) put 43% on waste and scrap and basic metals and 37% on energy products, and almost all of the weight falls on products whose own estimate is negative. Neither group drives the estimate alone: dropping any one product, all energy products or the two largest leaves it between −0.171 and −0.151 (Table OA1). The effective number of products is 15 (Borusyak et al., 2022), and the years 2021 and 2022 carry about 70% of the identifying weight (their share in the covariance between the instrument and the regressor, net of sector and year effects).
 
 <a name="table-oa1"></a>**Table OA1. Products, world prices and Rotemberg weights of the instrument**
 
@@ -87,7 +87,7 @@ Table OA2 adds two checks to Table B1: a control for material intensity times th
 | (3) Long difference, 2017–2022         | −0.121<sup>\*\*\*</sup>    | 80                     | −0.128                         | −0.343                         | 56/56   |
 |                                        | (0.035) [0.005]            |                        | (0.087) [0.122]                | (0.274) [0.241]                |         |
 
-Notes: 2SLS estimates of eqs. (19) and (20). Row (1) is column (1) of Tables 2 and 3. Row (2) adds $m_{j}$ times the real interest rate, the commercial loan rate less expected inflation. Row (3) uses the changes over 2017–2022, one observation per sector, with a constant. $F$: cluster-robust first-stage $F$ of $\beta$. Standard errors clustered by sector in parentheses; stars and brackets as in Table 2.
+Notes: 2SLS estimates of eqs. (19) and (20). Row (1) is column (1) of Tables 2 and 3. Row (2) adds $m_{j}$ times the real interest rate, the commercial loan rate less expected inflation. Row (3) uses the changes over 2017–2022, one observation per sector, with a constant; it starts in 2017 because the real exchange rate ended 2022 at its 2018 level, which would leave its term in eq. (20) almost without variation. $F$: cluster-robust first-stage $F$ of $\beta$. Standard errors clustered by sector in parentheses; stars and brackets as in Table 2.
 
 <a name="figure-oa1"></a>![Figure OA1. Estimates without one sector at a time](figures/fig_loo.png)
 
@@ -149,7 +149,7 @@ $$
 \ln s_{L,j,t+h}-\ln s_{L,j,t-1}=\beta_{h}\thinspace m_{j}\ln\left(\frac{P_{m,jt}}{C_{jt}}\right)+\gamma_{h}\thinspace m_{j}\ln\left(\frac{P_{m,j,t-1}}{C_{j,t-1}}\right)+\delta_{j}^{h}+\delta_{t}^{h}+u_{j,t+h}, \qquad \text{(OA.1)}
 $$
 
-where $C_{jt}$ is the wage and $\delta_{j}^{h}$ and $\delta_{t}^{h}$ are sector and year effects. The second regressor holds the previous year’s price fixed, so $\beta_{h}$ is the response to a rise in year $t$, and both regressors are instrumented by $m_{j}Z^{f}$ of the same year. Controlling for the change in the labor share in the previous year leaves the pattern unchanged (last row).
+where $C_{jt}$ is the wage and $\delta_{j}^{h}$ and $\delta_{t}^{h}$ are sector and year effects. The second regressor holds the previous year’s price fixed, so $\beta_{h}$ is the response to a rise in year $t$, and both regressors are instrumented by $m_{j}Z^{f}$ of the same year. In the year before a rise in the relative price, the labor share was already falling, although this is significant only at the 10% level under the wild cluster bootstrap (Table OA5, notes). The last row therefore controls for the change in the labor share in the previous year; the fall on impact and the rise after two years remain.
 
 <a name="table-oa5"></a>**Table OA5. Local projections of the labor share**
 
@@ -163,17 +163,17 @@ where $C_{jt}$ is the wage and $\delta_{j}^{h}$ and $\delta_{t}^{h}$ are sector 
 | Controlling for $\Delta\ln s_{L,j,t-1}$ |                                | −0.258<sup>\*\*\*</sup>                                    | −0.125<sup>\*</sup>                                        | 0.175<sup>\*\*\*</sup>                                     | 0.055                                                      |
 |                                           |                                | (0.047) [0.024]                                            | (0.064) [0.069]                                            | (0.027) [0.014]                                            | (0.039) [0.327]                                            |
 
-Notes: Column (1): eq. (19) on the observations of columns (2)–(5). Columns (2)–(5): eq. (OA.1) with start years 2014–2021 and the same 447 observations of 59 sectors at every horizon (442 with the control). First-stage $F$ of Sanderson and Windmeijer (2016): 355 and 129 (398 and 138 with the control), 494 in column (1). Path: the response of $m_{j}\ln(P_{m,jt}/w_{jt})$ itself; static prediction: column (1) times the path. Per unit of the path, the response averages −0.256 over $h=1$ to 3, against −0.205 at $h=0;$ the difference, −0.051 (0.055), is not significant. With $\ln s_{L,j,t-2}-\ln s_{L,j,t-1}$ on the left, the coefficient is 0.175 (0.038). Standard errors clustered by sector in parentheses; stars and brackets as in Table 2.
+Notes: Column (1): eq. (19) on the observations of columns (2)–(5). Columns (2)–(5): eq. (OA.1) with start years 2014–2021 and the same 447 observations of 59 sectors at every horizon (442 with the control). First-stage $F$ of Sanderson and Windmeijer (2016): 355 and 129 (398 and 138 with the control), 494 in column (1). Path: the response of $m_{j}\ln(P_{m,jt}/w_{jt})$ itself; static prediction: column (1) times the path. Per unit of the path, the response averages −0.256 over $h=1$ to 3, against −0.205 at $h=0;$ the difference, −0.051 (0.055), is not significant. With $\ln s_{L,j,t-2}-\ln s_{L,j,t-1}$ on the left, the coefficient is 0.175 (0.038) \[0.062\]. Standard errors clustered by sector in parentheses; stars and brackets as in Table 2.
 
 ## OA.7 Contributions to the labor share
 
-Sector contributions from eq. (28) are converted into pp with the previous-year labor share, weighted by previous-year value added and summed over the years of a period. For the national accounts labor share, they are averaged within sections with previous-year personnel costs as weights and converted with section value added and labor shares; they are zero for sections A, D, P, Q and R.
+Sector contributions from eq. (28) and from its counterpart for eq. (19) are converted into pp with the previous-year labor share, weighted by previous-year value added and summed over the years of a period. For the national accounts labor share, they are averaged within sections with previous-year personnel costs as weights and converted with section value added and labor shares; they are zero for sections A, D, P, Q and R.
 
 In 2018–2022 the labor share of the 53 sectors of Table 7 fell from 41.96% to 30.54%, mostly within sectors, and the year effects of eq. (19), which the contributions leave out, fell by 0.123 log points. The 95% interval of the two-channel total is [−2.18, −1.07] pp. Split by the shocks themselves, in the reduced form with $m_{j}Z_{jt}^{f}$ in place of the dollar price term, higher world prices lowered the labor share by 1.73 pp and the real exchange rate by 0.29 pp. The real exchange rate ended 2022 close to its 2018 level, so its part reflects only the timing of its rise in 2019–2020 and its fall in 2021–2022 (Section 4.5). This split need not add up to the two-channel total, since the dollar price of materials also moves with domestic shocks.
 
 ## OA.8 The elasticity of substitution
 
-Table OA6 gives estimates of eq. (27) beyond Table 6. The estimate is below one in levels and in one- to five-year differences, but it is imprecise. Most of the information comes from 2021–2022: without these years, or without the energy products in the instrument, the estimate stays below one but no longer differs significantly from one.
+Table OA6 gives estimates of eq. (27) beyond Table 6. The estimate is below one in levels, in one- to five-year differences and with materials measured as intermediate consumption, but it is imprecise. Most of the information comes from 2021–2022 and from energy prices: without these years, or without energy products in the instrument, the estimate stays below one but no longer differs significantly from one.
 
 <a name="table-oa6"></a>**Table OA6. The elasticity of substitution between materials and primary inputs**
 
@@ -194,8 +194,8 @@ Notes: Eq. (27) by 2SLS with the unscaled instrument $Z_{jt}^{f}$ of eq. (23) an
 
 ## References
 
-Borusyak, K., Hull, P. and Jaravel, X. (2022). Quasi-experimental shift-share research designs. *Review of Economic Studies*, 89(1), 181–213. https://doi.org/10.1093/restud/rdab030
+Borusyak, K., Hull, P., & Jaravel, X. (2022). Quasi-experimental shift-share research designs. *The Review of Economic Studies*, *89*(1), 181–213. https://doi.org/10.1093/restud/rdab030
 
-Goldsmith-Pinkham, P., Sorkin, I. and Swift, H. (2020). Bartik instruments: What, when, why, and how. *American Economic Review*, 110(8), 2586–2624. https://doi.org/10.1257/aer.20181047
+Goldsmith-Pinkham, P., Sorkin, I., & Swift, H. (2020). Bartik instruments: What, when, why, and how. *American Economic Review*, *110*(8), 2586–2624. https://doi.org/10.1257/aer.20181047
 
-Sanderson, E. and Windmeijer, F. (2016). A weak instrument F-test in linear IV models with multiple endogenous variables. *Journal of Econometrics*, 190(2), 212–221. https://doi.org/10.1016/j.jeconom.2015.06.004
+Sanderson, E., & Windmeijer, F. (2016). A weak instrument F-test in linear IV models with multiple endogenous variables. *Journal of Econometrics*, *190*(2), 212–221. https://doi.org/10.1016/j.jeconom.2015.06.004
